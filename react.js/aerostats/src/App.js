@@ -92,7 +92,7 @@ class App extends Component {
       this.setState(prevState => ({
         messages : prevState.messages.concat(newReply),
         newReply : {
-          message : ""
+          message : "" 
         },
       }))
     }
