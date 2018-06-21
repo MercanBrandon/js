@@ -1,0 +1,62 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.container-fluid {
+  max-width:480px ;
+  width: 45%;
+  border: 2px solid cornflowerblue;
+  border-radius: 10px;
+}
+
+.container-fluid li{
+  list-style: none;
+  width: 90%;
+  padding: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+li.reply {
+  margin-top: 5px;
+  border-left: 5px solid rgb(40, 107, 252);
+  background-color:azure;
+  text-align: left;
+  width: 75%;
+  margin-right: 20%;
+}
+
+li.question {
+  margin-top: 5px;
+  border-right: 5px solid blue;
+  background-color: rgb(97, 147, 255);
+  text-align: right;
+  color: white;
+  width: 75%;
+  margin-left: 20%;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

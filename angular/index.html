@@ -1,0 +1,45 @@
+<!doctype html>
+<html ng-app="todoApp">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.min.js"></script>
+    <script src="todo.js"></script>
+    <link rel="stylesheet" href="todo.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.0.4/css/bootstrap-combined.min.css">
+  </head>
+  <body>
+    <h2>Todo</h2>
+    <div ng-controller="TodoListController">
+      Hello {{ name }}, je suis {{ target }}, et j'ai {{ test.age }} ans
+      <button ng-click="getMonAge()">mon age</button>
+      <button ng-click="resetAge()">cancel</button>
+      <hr>
+      <ul>
+        <li ng-repeat="personne in people">
+          Personne : {{ personne.name }} a {{ personne.age }} ans
+          <button ng-click="delPerson($index)" class="btn btn-danger">X</button>
+          <button ng-click="editPerson($index, personne)" class="btn btn-primary">edit</button>
+        </li>
+      </ul>
+      <div ng-if = 'mode == 0'>
+        <input placeholder="nom" type="text" ng-model="newName.name"/>
+        <input placeholder="age" type="number" ng-model="newName.age"/>
+        <button ng-click="addPerson()">Ajouter une personne</button>
+      </div>
+
+      <div ng-if = 'mode == 1'>
+        <input placeholder="name" type="text" ng-model="altPers.name"/>
+        <input placeholder="age" type="number" ng-model="altPers.age"/>
+        <button ng-click="altPers()">Modifier </button>
+      </div>
+
+      <p ng-if='isExist === true'>Cette personne existe déjà</p>
+      <p ng-if='isRequired === true'>Nom et Age obligatoires.</p>
+    </div>
+  </body>
+</html>
+
+<!--
+Copyright 2018 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->
